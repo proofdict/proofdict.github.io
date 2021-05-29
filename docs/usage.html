@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Usage · Proofdict</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="The Usage navigate that create your Dictionary and use it."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Usage · Proofdict"/><meta property="og:type" content="website"/><meta property="og:url" content="https://proofdict.github.io//index.html"/><meta property="og:description" content="The Usage navigate that create your Dictionary and use it."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/proofdict.png" alt="Proofdict"/><h2 class="headerTitleWithLogo">Proofdict</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive siteNavItemActive"><a href="/docs/usage.html" target="_self">Usage</a></li><li class=""><a href="https://github.com/proofdict" target="_self">GItHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>GetStarted</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">GetStarted</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/docs/usage.html">Usage</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Usage</h1></header><article><div><span><p>The Usage navigate that create your Dictionary and use it.</p>
+<h2><a class="anchor" aria-hidden="true" id="create-your-dictionary"></a><a href="#create-your-dictionary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create your dictionary</h2>
+<h3><a class="anchor" aria-hidden="true" id="0-requirements"></a><a href="#0-requirements" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>0. Requirements</h3>
+<ul>
+<li><a href="https://github.com/">GitHub</a> account</li>
+<li><a href="http://nodejs.org/">Node.js</a></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="1-fork-dictionary-repository"></a><a href="#1-fork-dictionary-repository" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Fork Dictionary repository</h3>
+<ol>
+<li>Visit <a href="https://github.com/proofdict/proof-dictionary" title="proofdict/proof-dictionary">proofdict/proof-dictionary</a></li>
+<li>Click &quot;Fork&quot; button</li>
+</ol>
+<p><img src="/docs/assets/fork.png" alt="fork"></p>
+<h3><a class="anchor" aria-hidden="true" id="2-setting"></a><a href="#2-setting" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Setting</h3>
+<ol>
+<li>Open &quot;Setting&quot; on your forked repository</li>
+</ol>
+<p><img src="/docs/assets/open-settings.png" alt="open setting"></p>
+<ol start="2">
+<li>Go to &quot;GitHub Pages&quot; section</li>
+</ol>
+<p>You should set &quot;master&quot; branch for GitHub Pages.</p>
+<ul>
+<li>Select &quot;master branch&quot;</li>
+<li>Click &quot;Save&quot;</li>
+</ul>
+<p><img src="/docs/assets/settings.png" alt="GitHub Pages"></p>
+<ol start="3">
+<li>Open your GitHub pages</li>
+</ol>
+<p>For example. your GitHub account name is <code>azu</code> and please you visit <a href="https://azu.github.io/proof-dictionary/">https://azu.github.io/proof-dictionary/</a>.</p>
+<p><img src="/docs/assets/your-github-pages.png" alt="your-github-pages.png"></p>
+<p>Finally, You can see own dictionary!</p>
+<p><img src="/docs/assets/gh-pages.png" alt="gh-pages"></p>
+<p>Next, use your dictionary with <a href="https://textlint.github.io/">textlint</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="faq"></a><a href="#faq" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>FAQ</h3>
+<h4><a class="anchor" aria-hidden="true" id="q-github-pages-is-blank"></a><a href="#q-github-pages-is-blank" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Q. GitHub pages is blank</h4>
+<p>At first time, GitHub Pages is not built yet.
+You should edit some file like <code>README.md</code> and GitHub build pages.</p>
+<h2><a class="anchor" aria-hidden="true" id="use-with-textlinthttpstextlintgithubio"></a><a href="#use-with-textlinthttpstextlintgithubio" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use with <a href="https://textlint.github.io/">textlint</a></h2>
+<p>You can use your dictionry with <a href="https://textlint.github.io/">textlint</a>.
+<a href="https://textlint.github.io/">textlint</a> is plugabble linting tool for natural language.</p>
+<h3><a class="anchor" aria-hidden="true" id="create-new-workspace"></a><a href="#create-new-workspace" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create new workspace</h3>
+<p>Create <code>&lt;your-workspace&gt;</code> directory and <code>package.json</code> file. A <a href="https://docs.npmjs.com/files/package.json" title="package.json">package.json</a> manages dependencies of packages that include <code>textlint</code>:</p>
+<pre><code class="hljs"># Create your <span class="hljs-keyword">workspace</span> directory and <span class="hljs-keyword">move</span> to it.
+mkdir your-<span class="hljs-keyword">workspace</span>
+cd your-<span class="hljs-keyword">workspace</span>
+
+# <span class="hljs-string">`npm init`</span> command creates <span class="hljs-string">`package.json`</span> <span class="hljs-keyword">file</span>.
+npm init --yes
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="installation-of-proofdicttextlint-rule-proofdicthttpsgithubcomproofdictproofdicttreemasterpackages40proofdicttextlint-rule-proofdict"></a><a href="#installation-of-proofdicttextlint-rule-proofdicthttpsgithubcomproofdictproofdicttreemasterpackages40proofdicttextlint-rule-proofdict" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Installation of <a href="https://github.com/proofdict/proofdict/tree/master/packages/%40proofdict/textlint-rule-proofdict">@proofdict/textlint-rule-proofdict</a></h3>
+<p>Install <a href="https://textlint.github.io/">textlint</a> and <a href="https://github.com/proofdict/proofdict/tree/master/packages/%40proofdict/textlint-rule-proofdict">@proofdict/textlint-rule-proofdict</a> rule.</p>
+<pre><code class="hljs"><span class="hljs-built_in">npm</span> install --save-dev textlint @proofdict/textlint-rule-proofdict
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="configuration-textlintrc"></a><a href="#configuration-textlintrc" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuration <code>.textlintrc</code></h3>
+<p><code>.textlintrc</code> is configuration file for textlint.
+You should set your dictionary url to <code>.textlintrc</code> before using this rule.</p>
+<p>Create a <code>.textlintrc</code> file in your workspace:</p>
+<pre><code class="hljs"><span class="hljs-string">./node_modules/.bin/textlint</span> <span class="hljs-params">--init</span>
+</code></pre>
+<p>Edit <code>.textlintrc</code> as below:</p>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"rules"</span>: {
+        <span class="hljs-attr">"@proofdict/proofdict"</span>: {
+            <span class="hljs-attr">"dictURL"</span>: <span class="hljs-string">"https://&lt;your-name&gt;.github.io/proof-dictionary/"</span>
+        }
+    }
+}
+</code></pre>
+<p>For example, your GitHub account name is <code>azu</code>, set <code>dictURL</code> to <code>https://azu.github.io/proof-dictionary/</code>.</p>
+<h3><a class="anchor" aria-hidden="true" id="lint-text"></a><a href="#lint-text" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Lint text</h3>
+<p>Finally, you can lint file with your dictionary.</p>
+<pre><code class="hljs">./node_modules/.bin/textlint <span class="hljs-built_in">file</span>.md
+</code></pre>
+<p><a href="https://github.com/proofdict/proofdict/tree/master/packages/%40proofdict/textlint-rule-proofdict">@proofdict/textlint-rule-proofdict</a> always fetch latest version of your dictionary.
+In other word, you have edit your dictionary and the rule use it automatically.</p>
+<p>For more details, See <a href="https://textlint.github.io/docs/getting-started.html" title="Getting Started with textlint · textlint">Getting Started with textlint · textlint</a>.</p>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#create-your-dictionary">Create your dictionary</a><ul class="toc-headings"><li><a href="#0-requirements">0. Requirements</a></li><li><a href="#1-fork-dictionary-repository">1. Fork Dictionary repository</a></li><li><a href="#2-setting">2. Setting</a></li><li><a href="#faq">FAQ</a></li></ul></li><li><a href="#use-with-textlinthttpstextlintgithubio">Use with <a href="https://textlint.github.io/">textlint</a></a><ul class="toc-headings"><li><a href="#create-new-workspace">Create new workspace</a></li><li><a href="#installation-of-proofdicttextlint-rule-proofdicthttpsgithubcomproofdictproofdicttreemasterpackages40proofdicttextlint-rule-proofdict">Installation of <a href="https://github.com/proofdict/proofdict/tree/master/packages/%40proofdict/textlint-rule-proofdict">@proofdict/textlint-rule-proofdict</a></a></li><li><a href="#configuration-textlintrc">Configuration <code>.textlintrc</code></a></li><li><a href="#lint-text">Lint text</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/proofdict.png" alt="Proofdict" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/usage.html">Getting Started</a></div><div><h5>Dictionaries</h5><a href="/en/users.html">User Dictionary</a></div><div><h5>More</h5><a href="https://github.com/proofdict/proofdict">GitHub</a><a class="github-button" href="https://github.com/proofdict/proofdict" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2021 Facebook Inc.</section></footer></div></body></html>
